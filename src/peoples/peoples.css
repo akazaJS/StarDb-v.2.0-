@@ -1,0 +1,14 @@
+.div{
+    text-align: center;
+    border: 2px skyblue solid;
+    width: 300px;
+    border-radius: 10px;
+}
+.li:hover{
+    background-color: skyblue;
+}
+
+.liBack{
+    border: indigo 1px solid;
+    background-color: steelblue;
+}
