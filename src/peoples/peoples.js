@@ -1,12 +1,12 @@
 import React, {useContext} from "react";
 import './peoples.css'
-import {PeopleContext} from "../peoplesContext/peopleContext";
+import {ItemsContext} from "../hocComponent";
 
 
 
 export default function Peoples(){
 
-    const peoples = useContext(PeopleContext)
+    const peoples = useContext(ItemsContext)
 
     return(
         <div className='div'>

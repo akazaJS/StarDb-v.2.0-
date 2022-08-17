@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import {PlanetsContextClick} from "./planetsContext";
+import { ItemsContextClick} from "../hocComponent";
 
 
 
 export default function PlanetsDetails(){
 
-    const planetsDetails = useContext(PlanetsContextClick)
+    const planetsDetails = useContext(ItemsContextClick)
 
     return(
         <div className='div2'>

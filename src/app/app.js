@@ -5,14 +5,12 @@ import './app.css'
 import RandomPlanet from "../rabdom planet/random-planet";
 import Peoples from "../peoples/peoples";
 import PeopleDetails from "../peoples/peopleDetails";
-import {PeopleProvider} from "../peoplesContext/peopleContext";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Planets from "../planets/planets";
-import {PlanetsProvider} from "../planets/planetsContext";
 import PlanetsDetails from "../planets/planetsDetails";
-import {StarShipsProvider} from "../starships/starShipsContext";
 import StarShips from "../starships/starShips";
 import StarShipsDetails from "../starships/starShipsDetails";
+import {ItemsProvider} from "../hocComponent";
 
 
 export default function App(){
@@ -22,6 +20,7 @@ export default function App(){
         <div
             style={{width:'100%',minHeight:'100vh',backgroundSize:'cover'}}
             className='background'>
+            <ItemsProvider>
                 <div className='topAndRand'>
                     <div className='top'>
                         <Header/>
@@ -30,9 +29,6 @@ export default function App(){
                     <RandomPlanet/>
                 </div>
                     <div className='partAndDetails'>
-                        <PeopleProvider>
-                            <StarShipsProvider>
-                                <PlanetsProvider>
                                     <Routes>
                                     <Route path='/' element={<h1 style={{color:'whitesmoke'}}>Welcome to STAR DB!!!</h1>}/>
                                     <Route path='/peoples' element={ <Peoples/> }/>
@@ -42,10 +38,8 @@ export default function App(){
                                     <Route path='/starShips/*'  element={<StarShips/>}/>
                                     <Route path='/starShips/:detailsId' element={<StarShipsDetails/>}/>
                                     </Routes>
-                                </PlanetsProvider>
-                             </StarShipsProvider>
-                        </PeopleProvider>
                     </div>
+            </ItemsProvider>
         </div>
         </Router>
     )

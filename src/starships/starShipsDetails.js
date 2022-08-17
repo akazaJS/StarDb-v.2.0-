@@ -1,12 +1,10 @@
 import React, {useContext} from "react";
-import {StarShipsContextClick} from "./starShipsContext";
-import {useParams} from "react-router-dom";
-
+import {ItemsContextClick} from "../hocComponent";
 
 
 export default function StarShipsDetails(){
 
-    const starShipsDetails = useContext(StarShipsContextClick)
+    const starShipsDetails = useContext(ItemsContextClick)
 
     return(
         <div

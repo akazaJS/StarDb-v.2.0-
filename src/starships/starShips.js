@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import {StarShipsContext} from "./starShipsContext";
+import {ItemsContext} from "../hocComponent";
 
 
 
 export default function StarShips(){
 
-    const starShips = useContext(StarShipsContext)
+    const starShips = useContext(ItemsContext)
 
     return(
         <div className='div'>

@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
-import {PlanetsContext} from "./planetsContext";
+import {ItemsContext} from "../hocComponent";
 
 
 export default function Planets(){
 
-    const planets = useContext(PlanetsContext)
+    const planets = useContext(ItemsContext)
 
     return(
         <div className='div'>

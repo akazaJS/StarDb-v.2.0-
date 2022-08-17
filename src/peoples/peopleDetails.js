@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
 import './peopleDetails.css'
-import { PeopleContextClick} from "../peoplesContext/peopleContext";
+import {ItemsContext, ItemsContextClick} from "../hocComponent";
 
 
 export default function PeopleDetails(){
 
-    const peopleDetails = useContext(PeopleContextClick)
+    const peopleDetails = useContext(ItemsContextClick)
 
     return(
         <div className='div2'>
